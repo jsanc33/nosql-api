@@ -84,7 +84,7 @@ export const deleteUser = async (
       res.status(404).json({ message: "No user with this id!" });
     }
 
-    await Thought.deleteMany({ _id: { $in: dbUserData.thoughts } });
+    await Thought.deleteMany({ _id: { $in: dbUserData?.thoughts } });
     res.json({ message: "User and associated thoughts deleted!" });
   } catch (err) {
     console.log(err);
