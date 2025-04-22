@@ -8,12 +8,13 @@ import {
   deleteThought,
   addReaction,
   removeReaction,
-} from '../controllers/thoughtController.js';
+} from '../../controllers/thoughtController.js';
 
 const router = Router();
 
-
+// not sure why i am getting an error here
 router.route('/').get(getThoughts).post(createThought);
+
 
 
 router.route('/:thoughtId').get(getSingleThought).put(updateThought).delete(deleteThought);
